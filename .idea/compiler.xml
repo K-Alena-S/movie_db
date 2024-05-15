@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="movie_db_postgres" />
+        <module name="movie_db" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="movie_db" options="-parameters" />
       <module name="movie_db_postgres" options="-parameters" />
     </option>
   </component>

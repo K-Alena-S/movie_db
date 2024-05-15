@@ -1,7 +1,4 @@
 # Movies REST API(Hibernate, Postgres,Spring)
-API which can create, read, update and delete from a Postgres database using Hibernate.
-
-The API can be found at: https://protected-plains-75730.herokuapp.com/
 
 ## Endpoints
 Endpoints     | Type          | Description
@@ -17,7 +14,15 @@ Endpoints     | Type          | Description
 "/api/v1/actors"       | (GET)| All Actors
 "/api/v1/actors/{id}" | (GET)| Gets a specific actor.
 "/api/v1/actors/{id}" | (DELETE)| Deletes an actor.
+"/api/v1/directors"       | (GET)| All Directors
+"/api/v1/directors/{id}" | (GET)| Gets a specific director.
+"/api/v1/directors/{id}" | (DELETE)| Deletes an director.
+"/api/v1/genre"       | (GET)| All Genre
+"/api/v1/genre/{id}" | (GET)| Gets a specific genre.
+"/api/v1/genre/{id}" | (DELETE)| Deletes an genre.
 "/api/v1/actors/filter?from={date}&to={date}" | (GET)|  Gets an actor whose date of birth is between the two dates.
+пример: http://localhost:8081/api/v1/actors/filter?from=1950-01-01&to=2000-10-10
 "/api/v1/movies/search?title={string}" | (GET)|  Gets a movie based on title.
 
-The endpoints are pretty self explanatory, hence the Genre and Director endpoints not shown. They are identical to Actor, replacing "actors" with e.g. "genre" & "directors".
+
+

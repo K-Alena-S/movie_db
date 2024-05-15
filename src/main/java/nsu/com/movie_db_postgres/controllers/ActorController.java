@@ -51,7 +51,8 @@ public class ActorController {
      * @param to date
      */
     @RequestMapping(value = "/filter", method = RequestMethod.GET)
-    public ResponseEntity<CommonResponse> getActorsByDate(@RequestParam("from") String from, @RequestParam("to") String to) {
+    public ResponseEntity<CommonResponse> getActorsByDate(@RequestParam("from") String from,
+                                                          @RequestParam("to") String to) {
 
         var commonResponse = new CommonResponse();
 
