@@ -29,5 +29,5 @@ Endpoints     | Type          | Description
 пример: http://localhost:8081/api/v1/directors/sort
 
 Создание контейнера
-docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
