@@ -65,6 +65,27 @@ public class ActorController {
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/inner", method = RequestMethod.GET)
+    public ResponseEntity<CommonResponse> getActorsInnerByDate() {
+
+        var commonResponse = new CommonResponse();
+
+        commonResponse.data = actorRepository.innerByDate();
+        commonResponse.message = "Actors between inner join";
+
+        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
+    }
+    @RequestMapping(value = "/outer", method = RequestMethod.GET)
+    public ResponseEntity<CommonResponse> getActorsOuterByDate() {
+
+        var commonResponse = new CommonResponse();
+
+        commonResponse.data = actorRepository.outerByDate();
+        commonResponse.message = "Actors between outer ";
+
+        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<CommonResponse> deleteActor(@PathVariable Integer id) {
         CommonResponse cr = new CommonResponse();

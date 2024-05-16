@@ -45,6 +45,18 @@ public class DirectorsController {
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
     }
 
+        @RequestMapping(value = "/sort", method = RequestMethod.GET)
+    public ResponseEntity<CommonResponse> getDirectorsSortByDate() {
+
+        var commonResponse = new CommonResponse();
+
+
+        commonResponse.data = directorRepository.sortByDate();
+        commonResponse.message = "Directors between sort ";
+
+        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
+    }
+
     /**
      * Method that deletes a director. Before the director is deleted
      * we set the "director" column for the movie row to null.

@@ -20,9 +20,14 @@ Endpoints     | Type          | Description
 "/api/v1/genre"       | (GET)| All Genre
 "/api/v1/genre/{id}" | (GET)| Gets a specific genre.
 "/api/v1/genre/{id}" | (DELETE)| Deletes an genre.
+
 "/api/v1/actors/filter?from={date}&to={date}" | (GET)|  Gets an actor whose date of birth is between the two dates.
 пример: http://localhost:8081/api/v1/actors/filter?from=1950-01-01&to=2000-10-10
+
 "/api/v1/movies/search?title={string}" | (GET)|  Gets a movie based on title.
 
+пример: http://localhost:8081/api/v1/directors/sort
 
+Создание контейнера
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 

@@ -23,6 +23,9 @@ public class Director {
     @Column
     private String lastname;
 
+    @Column
+    private Integer age;
+
     // "director" syftar på director fältet i Movie klassen.
     @OneToMany(mappedBy = "director",
             fetch = FetchType.LAZY)
@@ -34,6 +37,10 @@ public class Director {
 
     public Integer getId(){
         return id;
+    }
+
+    public Integer getAge(){
+        return age;
     }
 
     public void setFirstname(String firstname) {
