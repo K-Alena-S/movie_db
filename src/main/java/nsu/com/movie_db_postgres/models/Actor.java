@@ -25,9 +25,6 @@ public class Actor {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String lastname;
 
-//    @Column
-//    private String imdb_url;
-
     @Column(name = "date_of_birth", columnDefinition = "DATE")
     private LocalDate date_of_birth;
 
@@ -54,14 +51,7 @@ public class Actor {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-//
-//    public String getImdb_url() {
-//        return imdb_url;
-//    }
-//
-//    public void setImdb_url(String imdb_url) {
-//        this.imdb_url = imdb_url;
-//    }
+
 
     public LocalDate getDate_of_birth() {
         return date_of_birth;

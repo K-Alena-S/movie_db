@@ -20,10 +20,6 @@ public class Comment {
 
     private String commentName;
 
-//    @OneToMany(mappedBy = "studio",
-//            fetch = FetchType.LAZY)
-//    private List<Studio> studio = new ArrayList<>();
-
     public Integer getId(){
         return id;
     }

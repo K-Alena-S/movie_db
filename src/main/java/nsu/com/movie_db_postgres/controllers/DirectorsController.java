@@ -18,7 +18,7 @@ import java.util.List;
 public class DirectorsController {
 
     @Autowired
-    private DirectorRepository directorRepository;
+    public DirectorRepository directorRepository;
 
     @Autowired
     private MovieRepository movieRepository;
@@ -45,17 +45,17 @@ public class DirectorsController {
         return new ResponseEntity<>(commonResponse, HttpStatus.OK);
     }
 
-        @RequestMapping(value = "/sort", method = RequestMethod.GET)
-    public ResponseEntity<CommonResponse> getDirectorsSortByDate() {
-
-        var commonResponse = new CommonResponse();
-
-
-        commonResponse.data = directorRepository.sortByDate();
-        commonResponse.message = "Directors between sort ";
-
-        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
-    }
+//        @RequestMapping(value = "/sort", method = RequestMethod.GET)
+//    public ResponseEntity<CommonResponse> getDirectorsSortByDate() {
+//
+//        var commonResponse = new CommonResponse();
+//
+//
+//        commonResponse.data = directorRepository.sortByDate();
+//        commonResponse.message = "Directors between sort ";
+//
+//        return new ResponseEntity<>(commonResponse, HttpStatus.OK);
+//    }
 
     /**
      * Method that deletes a director. Before the director is deleted

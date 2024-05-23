@@ -9,30 +9,25 @@ import javax.persistence.*;
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
-public class Studio {
+public class Country {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
 
     @Column
-    private String studioName;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    private Sait sait;
-
-    public Sait getSait() { return sait; }
+    private String countryName;
 
     public Integer getId(){
         return id;
     }
 
-    public String getStudioName() {
-        return studioName;
+    public String getCountryName() {
+        return countryName;
     }
 
-    public void setStudioName(String studioName) {
-        this.studioName = studioName;
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
     }
 
 }

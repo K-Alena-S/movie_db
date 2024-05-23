@@ -26,7 +26,6 @@ public class Director {
     @Column
     private Integer age;
 
-    // "director" syftar på director fältet i Movie klassen.
     @OneToMany(mappedBy = "director",
             fetch = FetchType.LAZY)
     private List<Movie> movie = new ArrayList<>();
