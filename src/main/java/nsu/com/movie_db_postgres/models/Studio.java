@@ -18,7 +18,7 @@ public class Studio {
     @Column
     private String studioName;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     private Sait sait;
 
     public Sait getSait() { return sait; }

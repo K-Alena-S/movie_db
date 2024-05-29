@@ -16,7 +16,6 @@ public class Actor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-
     @Column
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String firstname;

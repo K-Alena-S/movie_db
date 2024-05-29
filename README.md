@@ -31,3 +31,10 @@ Endpoints     | Type          | Description
 Создание контейнера
 
 docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+
+ALTER TABLE director
+ADD CONSTRAINT check_age CHECK (age > 0);
+
+CREATE INDEX idx_actor_firstname_nonnull_lastname
+ON Actor (firstname)
+WHERE lastname IS NOT NULL
