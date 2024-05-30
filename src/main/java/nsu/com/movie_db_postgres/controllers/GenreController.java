@@ -1,8 +1,11 @@
 package nsu.com.movie_db_postgres.controllers;
 
+import nsu.com.movie_db_postgres.models.FilterCriteria;
 import nsu.com.movie_db_postgres.repositories.GenreRepository;
 import nsu.com.movie_db_postgres.repositories.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -76,5 +79,37 @@ public class GenreController {
             return new ResponseEntity<>(cr, resp);
         }
     }
+
+//    public List<Genre> findGenres(FilterCriteria filterCriteria) {
+//        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM Genre");
+//
+//        if (filterCriteria != null && !filterCriteria.getCriteria().isEmpty()) {
+//            queryBuilder.append(" WHERE ");
+//
+//            for (int i = 0; i < filterCriteria.getCriteria().size(); i++) {
+//                Pair<String, Object> criterion = filterCriteria.getCriteria().get(i);
+//
+//                queryBuilder
+//                        .append(criterion.getKey())
+//                        .append(" = ")
+//                        .append("$")
+//                        .append(i + 1);
+//
+//                if (i < filterCriteria.getCriteria().size() - 1) {
+//                    queryBuilder.append(" AND ");
+//                }
+//            }
+//        }
+//
+//        // Создание запроса
+//        Query query = entityManager.createNativeQuery(queryBuilder.toString());
+//
+//        // Добавление параметров запроса
+//        for (int i = 1; i <= filterCriteria.getCriteria().size(); i++) {
+//            query.setParameter(i, filterCriteria.getCriteria().get(i - 1).getValue());
+//        }
+//
+//        return query.getResultList();
+//    }
 
 }

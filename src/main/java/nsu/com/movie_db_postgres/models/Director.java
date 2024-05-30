@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(indexes = @Index(columnList = "age"))
+//@Table(indexes = @Index(columnList = "age"))
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
@@ -44,6 +44,10 @@ public class Director {
 
     public Integer getAge(){
         return age;
+    }
+
+    public void setAge(Integer age){
+        this.age = age;
     }
 
     public void setFirstname(String firstname) {

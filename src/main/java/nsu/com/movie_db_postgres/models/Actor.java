@@ -31,6 +31,14 @@ public class Actor {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<Movie> movies;
 
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    @JoinTable(
+            name = "actor_country",
+            joinColumns = @JoinColumn(name="actor_id"),
+            inverseJoinColumns = @JoinColumn(name="country_id")
+    )
+    private List<Country> countries;
+
     public String getFirstname() {
         return firstname;
     }

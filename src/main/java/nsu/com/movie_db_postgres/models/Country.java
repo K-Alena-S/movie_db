@@ -1,9 +1,12 @@
 package nsu.com.movie_db_postgres.models;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @JsonIdentityInfo(
@@ -29,5 +32,4 @@ public class Country {
     public void setCountryName(String countryName) {
         this.countryName = countryName;
     }
-
 }
